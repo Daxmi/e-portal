@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+section {
+    padding-top: 80px;
+}
+.drag-area {
+    margin: auto;
+    width: 50%; 
+    max-width: 391px;
+    height:85px; 
+    border: 1.26864px dashed #0D2855;
+    border-radius: 6.34319px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.drag-area.active{
+    border: 1.26864px dashed #4dcc5e;
+  }
+.drag-area .icon{
+    font-size: 25.86px;
+}
+.drag-area button{
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: none;
+    color:  #0D2855;
+    cursor: pointer;
+}
+.uploadName {
+    font-size: 12px;
+    padding: 5px;
+    color:  #0D2855;
+}
+
+.or {
+    margin: 19px 0;
+    text-align: center;
+}
+.or h1 {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Lato;
+}
+.urlInput input {
+    display: block;
+    margin: auto;
+    width: 70%;
+    max-width: 667px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #0D2855;
+    color: #0D2855;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Lato;
+    
+    padding-left: 20px;
+}             
+.urlInput input::placeholder {
+    color: #0D2855;
+}
+.adminCourseContainer {
+    width: 90%;
+    max-width: 992px;
+    box-sizing: border-box;
+}
+.input-box {
+    width: 90%;
+    margin: 40px 20px;
+}
+.adminCourseContainer input,select {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #0D2855;
+    color: #0D2855;
+    width: 100%;
+    /* margin: 20px; */
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Lato;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.adminCourseContainer input::placeholder {
+    color: #0D2855;
+}
+
+.input-box .details {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-family: 400;
+}
+.description {
+    /* width: 100%; */
+    margin: 20px;
+    
+}
+.description input {
+    width: 95%;
+    height: 35px;
+    max-width: 976px;
+    border: 1px solid #0D2855;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Lato;
+    padding-left: 20px;
+    color: #0D2855;
+}
+.description .details {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-family: 600;
+}
+.chooseMaterial {
+    margin: 20px;
+}
+.chooseMaterial p {
+    font-weight: 400;
+    font-size: 18px;
+}
+.selectMaterial {
+    display: flex;
+    margin-top: 21px;
+}
+.selectMaterial input {
+    width: 15px;
+    height: 15px;
+    /* outline: 2px solid #0D2855;
+    box-sizing: border-box; */
+    
+}
+.selectMaterial label {
+    margin-left: 13px;
+    font-size: 18px;
+    font-family: 400;
+}
+.lessonVideo {
+    margin-right: 16px;
+}
+.input-box .details {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-family: 400;
+}
+.button {
+    color: white;
+    width: 80%;
+    max-width: 314px;
+    height: 46px;
+    border-radius: 10px;
+    background: #0D2855;
+    display: block;
+    margin: 0 41px 50px auto;
+}
+@media screen and (min-width:768px) {
+    .adminCourseContainer {
+        width: 90%;
+        max-width: 992px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+    .input-box {
+        margin: 20px;
+        width: 400px;
+    }
+}
+@media screen and (min-width:998px) {
+    .or h1 {
+        font-size: 28px;
+    }
+    .urlInput input {
+        height: 47px;
+    }
+    .urlInput input::placeholder {
+        font-size: 24px;
+    }
+    .input-box .details {
+        font-size: 24px;
+    }
+    .description {
+        padding-left: 54px;
+    }
+    .description input {
+        height: 56px;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+    .selectMaterial {
+        margin-top: 31px;
+    }
+    .adminCourseContainer {
+        padding-left: 74px;
+        margin: 36px 0;
+    }
+    .adminCourseContainer input, select {
+        height: 50px;
+        font-size: 16px;
+    }
+    .chooseMaterial {
+        padding-left: 54px;
+    }
+    .lessonVideo {
+        margin-right: 106px;
+    }
+}

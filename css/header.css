@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+    margin: 0;
+    /* outline: 2px solid red; */
+}
+body {
+    color: #0D2855;
+    font-family:Lato;
+    box-sizing: border-box;
+}
+header {
+    box-sizing: border-box;
+    position: fixed;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    background-color: white;
+}
+.search {
+    display: flex;
+    visibility: hidden;
+}
+header form {
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+}
+header input {
+   width: 150px;
+   height: 20px;
+   border-radius: 5px;
+   background-color: #E3F5FE;
+   border: none;
+   padding: 5px;
+   box-shadow: 0.2px 2px #cac9c9;
+}
+input:focus {
+    outline: none;
+}
+.iProfile {
+    display: flex;
+    align-items: center;
+}
+.profileSection {
+    font-size: 25px;
+    padding-right: 10px;
+}
+.dropDown {
+    font-size: 10px;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.dropDownContent {
+    display: none;
+    position: fixed;
+    right: 10px;
+    background-color: #f9f9f9;
+    width: 200px;
+    z-index: 1000;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
+   
+}
+.dropDownContent ul {
+    padding: 0;
+   
+}
+.dropDownContent ul li {
+    list-style: none;
+    color: #0D2855;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    background-color: #f1f1f1;
+}
+.dropDownContent ul li a {
+    text-decoration: none;
+    color: #0D2855;
+}
+
+.asideLeft {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: -1000px;
+    z-index: 100;
+    width: 100%;
+    transition: left 1s ease;
+    background-color: rgba(0,0,0,0.05);
+}
+.left {
+    width: 250px;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color:rgba(213, 241, 254);
+    height: calc(100vh - 10px);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.show {
+    left:0;
+}
+.left ul {
+    padding: 0;
+}
+.left li {
+    list-style: none;
+    padding: 15px 0;
+}
+.left li a {
+    text-decoration: none;
+    color: #0D2855;
+    padding-left: 20px;
+    font-weight: 600;
+}
+.dashBoard {
+    margin: 20px 0;
+}
+.dashBoard h2 {
+    font-weight: 500;
+}
+.dashBoardList ul li{
+    display: flex;
+}
+.dashBoardList ul li p {
+    padding-left: 20px;
+    font-weight: 600;
+}
+.signOut {
+    position: absolute;
+    bottom: 50px;
+}
+.noDisplay {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.logo {
+    margin-top: 10px;
+    width: 50px;
+}
+.logo img {
+    width: 100%;
+   
+}
+.menu {
+    display: flex;
+    font-size: 25px;
+}
+.displayError{
+    display: block;
+}
+
+.success {
+    background-color: red;
+    padding: 5px 50px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+    display: none;
+}
+
+.courseTitleError{
+    color: red;
+    font-size: 16px;
+    display: none;
+}
+.courseCodeError{
+    color: red;
+    font-size: 16px;
+    display: none;
+}
+.videoError{
+    color: red;
+    font-size: 16px;
+    display: none;
+}
+.deptError{
+    color: red;
+    font-size: 16px;
+    display: none;
+}
+.levelError{
+    color: red;
+    font-size: 16px;
+    display: none;
+}
+.error, .descriptionError{
+    color: red;
+    font-size: 16px;
+    display: none;
+}
+.displayError{
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        padding: 20px;
+    }
+    .menu {
+        visibility: hidden;
+    } 
+    section {
+        margin-left: 250px;
+    }
+    .asideLeft {
+        left:0;
+        width: 250px;
+        background-color: transparent;
+    }
+    .logo img {
+        padding-left: 10px;
+    }
+    header input {
+        width: 400px;
+        height: 22px;
+    }
+    
+}
+@media screen and (min-width: 998px){
+    header input {
+        width: 700px;
+        height: 24px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .asideLeft {
+        width: 300px;
+    }
+    .left {
+        width: 100%;
+    }
+    .left li a {
+        font-weight: 600;
+        font-size: 20px;
+    }
+   
+    .dashBoard h2 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .dashBoardList ul li p {
+        font-weight: 600;
+        font-size: 20px;
+    }
+    section {
+        margin-left: 300px;
+    }
+}

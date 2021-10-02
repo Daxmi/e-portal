@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/registerStudent.css">
+    <link rel="stylesheet" href="../resouces/fontawesome-free-5.15.3-web/css/all.min.css">
+    <title>E-Learning</title>
+</head>
+<body>
+    <main>
+        <nav>
+            <a href="index.html"><img src="../img/e-learning-symbol-icon (2).jpg" alt="" class="logo"></a>
+        </nav>
+        <div class="editProfile">
+            <h1>
+                Sign Up
+            </h1> 
+        </div>
+        <div class="container">
+            <form  class="form-control">
+                <div class="name-container">
+                    <div class="input-box">
+                        <span class="details">First name</span>
+                        <input type="text"required placeholder="First Name" id="afirstname" class="input">
+                        <small class="error errorFirstName"> insert first name</small> 
+                    </div>
+                    <div class="input-box ">
+                        <span class="details">Last name</span>
+                        <input type="text"required placeholder="Surname" id="asurname" class="input">
+                        <small class="error errorSurName"> insert correct surname</small> 
+                    </div>                     
+                </div>
+                <div>
+                    <div class="input-box">
+                        <span class="details">Email address</span>
+                        <input type="text"required placeholder="Surname" id="aemail" class="input">
+                        <small class="error errorEmail">insert email</small>  
+                    </div>   
+                    <div class="input-box">
+                        <span class="details">Password</span>
+                        <input type="password"required placeholder="Password" id="apassword" class="input">
+                        <small>Must be 8 characters long</small>
+                        <small class="error errorPassword"> Enter at least 6 characters password length</small> 
+                    </div> 
+                    <div class="input-box">
+                        <span class="details">Confirm Password</span>
+                        <input type="password"required placeholder="Password" id="acpassword" class="input">
+                        <small class="error errorConfirmPassword">password mismatch</small>  
+                    </div> 
+                </div>
+                    <p>By using e-learning, you agree to our <a href="">Privacy Notice</a> and <a href="">Terms of Use</a> </p>
+                </div>
+                <div class="buttonContainer">
+                    <button type="button" class="button " onclick="signUp(event)" id="btn">
+                    <span class="buttonText">Sign Up</span></button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <aside class="background">
+
+    </aside>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+    <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyAZX19Xy5P5kPnHFH4l-Yg-rKwGu9m5CUc",
+        authDomain: "e-learningplatform-42ddf.firebaseapp.com",
+        projectId: "e-learningplatform-42ddf",
+        storageBucket: "e-learningplatform-42ddf.appspot.com",
+        messagingSenderId: "1000092080197",
+        appId: "1:1000092080197:web:2e917fd9eaa1f853dceb2c",
+        measurementId: "G-5P4F5CQ9BQ"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>
+    <script src="./js/adminRegister.js"></script>
+
+</body>
+</html>

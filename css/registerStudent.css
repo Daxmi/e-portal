@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+}
+nav {
+    margin: 10px;
+    text-align: center;
+}
+nav img {
+    width: 50px;
+}
+
+.editProfile {
+    text-align: center;
+}
+.container {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 25px 30px;
+}
+.form-control input , select {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+.input-box{
+    margin-bottom: 15px;
+    width: 100%;
+}
+.details{
+    margin-bottom: 5px;
+    display: block;
+}
+.buttonContainer {
+    text-align: center;
+    margin: 20px;
+}
+form .buttonContainer button {
+    height: 45px;
+    width: 60%;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    
+    box-sizing: border-box;
+    position: relative;
+    background-color:#0D2855;
+}
+.courseTitleError{
+    color: red;
+    font-size: 16px;
+    display: none;
+}
+.courseCodeError{
+    color: red;
+    font-size: 16px;
+    display: none;
+}
+.videoError{
+    color: red;
+    font-size: 16px;
+    display: none;
+}
+.deptError{
+    color: red;
+    font-size: 16px;
+    display: none;
+}
+.levelError{
+    color: red;
+    font-size: 16px;
+    display: none;
+}
+.error{
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+.displayError{
+    display: block;
+}
+.success {
+    background-color: red;
+    padding: 5px 50px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: black;
+    font-size: 20px;
+    display: none;
+}
+.buttonText {
+    transition: all 0.2s;
+}
+
+.buttonLoading .buttonText {
+    visibility: hidden;
+    opacity: 0;
+}
+.buttonLoading::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 5px solid transparent;
+    border-top-color: white;
+    border-radius: 50%;
+    animation: button-loading-spiner 1s ease infinite;
+}
+@keyframes button-loading-spiner {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+@media screen and (min-width: 768px) {
+  
+    .name-container, .select-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .name-container .input-box,
+    .select-container .input-box {
+        width: 45%;
+    }
+   
+}
+@media screen and (min-width: 998px) {
+    main {
+    
+        height: 100vh;
+        width: 50%;
+        float: left;
+    }
+    .background {
+        position: absolute;
+        width: 50%;
+        left: 50%;
+        height: 100vh;
+        background-color: #D5F1FE;
+        background-image:url("../img/e-portal.png");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .form-control input {
+        font-size: 20px;
+    }
+}

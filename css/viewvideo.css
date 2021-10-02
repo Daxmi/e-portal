@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+} 
+.back {
+    padding: 80px 20px 20px;
+}
+.back a {
+    text-decoration: none;
+    color: #0D2855;
+}
+.myCourses {
+    text-align: center;
+    font-weight: lighter;
+    margin: 0 40px;
+}
+.videoClass{
+    margin: 40px 0;
+    text-align: center;
+}
+iframe {
+    width: 85%;
+    max-width: 500px;
+}
+
+@media screen and (min-width: 998px) {
+    .videoClass {
+        text-align: start;
+        margin-left: 20px;
+    }
+}

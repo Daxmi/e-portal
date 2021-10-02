@@ -1,0 +1,54 @@
+.back {
+    padding: 80px 20px 20px;
+}
+.back a {
+    text-decoration: none;
+    color: #0D2855;
+}
+.myCourses {
+    text-align: center;
+    font-weight: lighter;
+    margin: 0 40px;
+}
+.pdfText {
+    position: relative;
+    margin: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0.2px 2px #cac9c9;
+    height: 70px;
+    max-width: 700px;
+}
+.courseDetailsPdf {
+    margin-bottom: 20px;
+}
+.courseDetailsPdf p {
+    font-size: 10px;
+    margin: 10px 0;
+}
+.courseLinkPdf {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.courseLinkPdf a {
+    font-size: 12px;
+    color: #0D2855;
+}
+
+@media screen and (min-width: 998px) {
+    .pdfText {
+        height: 100px;
+    }
+    .courseDetailsPdf h5{
+        font-size: 20px;
+    }
+    .courseDetailsPdf p {
+        font-size: 12px;
+    }
+    .courseLinkPdf a {
+        font-size: 16px;
+    }
+}

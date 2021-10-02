@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/css/header.css"> -->
+    <link rel="stylesheet" href="../css/adminDashboard.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <title>E-Learning</title>
+    <link rel="stylesheet" href="../resouces/fontawesome-free-5.15.3-web/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="menu" id="menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="search">
+            <form action="">
+                <input type="text" placeholder="Search">
+            </form>
+        </div>
+        <div class="dropdown">
+            <div class="iProfile">
+                <div class="profileSection">
+                    <i class="far fa-user-circle"></i>
+                </div>
+                <div class="dropDown">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="dropDownContent">
+                <ul>
+                    <li id="firstName"></li>
+                    <hr>
+                    <li id="dept"></li>
+                    <li id="level"></li>
+                    <li> <a href="#">Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <aside class="asideLeft">
+            <div class="logo">
+                <img src="../img/e-learning-symbol-icon (2).jpg" alt="">
+            </div>
+            <div class="left">
+                <div class="dashBoard">
+                    <h2>My Dashboard</h2>
+                </div>
+                <div class="dashBoardList">
+                    <ul>
+                        <!-- <li>
+                            <div>
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                           <p> My Courses</p>
+                        </li> -->
+                        <li>
+                            <div>
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <a href="#">Edit Profile</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <p>
+                                Notification
+                            </p>
+                        </li>
+                        <li>
+                            <div>
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <p>
+                                Settings
+                            </p>
+                        </li>
+                    </ul>
+                    <ul class="signOut">
+                        <li>
+                            <div>
+                                <i class="fas fa-sign-out-alt"></i>
+                            </div>
+                            <div>
+                                <a href="" onclick="signOut(event)">Sign Out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+        <section id="section">
+            <div class="success">
+                <p>Successful</p>
+            </div>
+            <form>
+                <div id="holder" class="drag-area">
+                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <div class="uploadName"></div>
+                    <button class="dragUpload">Upload File</button>
+                    <input type="file" id="pdfFile" hidden>            
+                </div>
+                <div class="or">
+                    <h1>
+                        OR
+                    </h1>
+                </div>
+                <div class="urlInput">
+                    <input type="text" placeholder="Paste URL" id="youTubeLink"> 
+                    <small class="videoError"> insert video link</small>
+                </div>
+                <div class="adminCourseContainer">
+                    <div class="input-box">
+                        <span class="details">Course Title</span>
+                        <input type="text" required placeholder="Course Title"  id="courseTitle" class="input">
+                        <small class="courseTitleError"> insert course title</small>
+                   </div>
+                   <div class="input-box">
+                    <span class="details">Course Code</span>
+                    <input type="text" required placeholder="Course Title" id="courseCode" class="input">
+                    <small class="courseCodeError"> insert course code</small> 
+                     </div>
+                </div>
+                <div class="adminCourseContainer">
+                    <div class="input-box">
+                        <span class="details">Course Department</span>
+                        <select name="" id="adminDepartment" class="input">
+                            <option value="">Select department</option>
+                            <option>Physics</option>
+                            <option>Chemistry</option>
+                            <option>Computer Science</option>
+                            <option>Business Administration</option>
+                        </select>
+                        <small class="deptError"> select department</small> 
+                   </div>
+                   <div class="input-box">
+                    <span class="details">Course Level</span>
+                    <select name="" id="adminLevel" class="input">
+                        <option value="">Select level</option>
+                        <option>100 Level</option>
+                        <option>200 Level</option>
+                        <option>300 Level</option>
+                        <option>400 Level</option>
+                    </select>
+                    <small class="levelError"> select level</small>
+                     </div>
+                </div>
+                <div class="description">
+                    <span class="details">Add Description</span>
+                    <input type="text" id="textDescription" onkeyup="count();">
+                    <small class="descriptionError">Add course description</small>
+                    <p id="total">Characters remaining: 80</p>
+                </div>
+    
+                <div class="chooseMaterial">
+                    <p>
+                        Please choose a category
+                    </p>
+                    <div class="selectMaterial">
+                        <div class="lessonVideo">
+                            <input type="checkbox" name="" id="lesssonVideo">
+                            <label for="lesssonVideo">Lesson Video</label>
+                        </div>
+                        <div class="lesssonNote">
+                            <input type="checkbox" name="" id="lesssonNote">
+                            <label for="lesssonNote">Lesson Note</label>
+                        </div>
+                    </div>
+              
+                </div>
+                <!-- <button class="button">UPLOAD</button> -->
+                <button class="button" id="btn" onclick="CreateCourse(event)"><snap class="buttonText">Create Course</snap></button>    
+            </form>
+        </section>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+<!-- Add additional services that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-storage.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAZX19Xy5P5kPnHFH4l-Yg-rKwGu9m5CUc",
+    authDomain: "e-learningplatform-42ddf.firebaseapp.com",
+    projectId: "e-learningplatform-42ddf",
+    storageBucket: "e-learningplatform-42ddf.appspot.com",
+    messagingSenderId: "1000092080197",
+    appId: "1:1000092080197:web:2e917fd9eaa1f853dceb2c",
+    measurementId: "G-5P4F5CQ9BQ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<script src="../js/adminDashboard.js"></script>
+<script src="../js/logout.js"></script>
+<script src="../js/header.js"></script>
+</body>
+</html>
